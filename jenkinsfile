@@ -1,0 +1,15 @@
+pipeline {
+    // Tool Installed on Jenkins
+    //Tool instalada en Jenkins
+    tool{
+        node "nodejs"
+    }
+    agent any
+    stages {
+        stage('Run Test') {
+            steps {
+                npm "./index.test.js"
+            }
+        }
+    }
+}
